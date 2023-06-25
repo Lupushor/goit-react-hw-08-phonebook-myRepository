@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { ContactItem } from './ContactList.styled';
+import { Button, ContactItem } from './ContactList.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { deleteContact, fetchContacts } from 'redux/contacts/operations';
 import {
@@ -28,9 +28,9 @@ export const ContactList = () => {
       {filterContacts.map(({ id, name, number }) => (
         <ContactItem key={id}>
           {name}: {number}
-          <button type="button" onClick={() => onDelete(id)}>
+          <Button type="button" onClick={() => onDelete(id)}>
             Delete contact
-          </button>
+          </Button>
         </ContactItem>
       ))}
       {isLoading && <h1>Loading...</h1>}

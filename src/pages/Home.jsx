@@ -1,7 +1,15 @@
+import { useAuth } from 'hooks/useAuth';
+import { SubTitle, Title } from './Pages.styled';
+
 const Home = () => {
+  const { isLoggedIn } = useAuth();
+
   return (
     <div>
-      <h1>Your contacts phonebook</h1>
+      <Title>Welcome to our service!</Title>
+      <SubTitle>
+        Please {isLoggedIn ? 'login' : 'register'} to continue
+      </SubTitle>
     </div>
   );
 };

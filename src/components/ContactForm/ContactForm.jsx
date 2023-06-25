@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { Form, Label } from './ContactForm.styled';
+import { Button, Form, Input, Label } from './ContactForm.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectContacts } from 'redux/contacts/selectors';
 import { addContact } from 'redux/contacts/operations';
 import { nanoid } from '@reduxjs/toolkit';
+
+// import { Input } from 'components/LoginForm/LoginForm.styled';
 
 export const ContactForm = () => {
   const [name, setName] = useState('');
@@ -50,7 +52,7 @@ export const ContactForm = () => {
     <Form onSubmit={handleSubmit}>
       <Label>
         Name
-        <input
+        <Input
           value={name}
           type="text"
           name="name"
@@ -62,7 +64,7 @@ export const ContactForm = () => {
       </Label>
       <Label>
         Number
-        <input
+        <Input
           value={number}
           type="tel"
           name="number"
@@ -72,7 +74,7 @@ export const ContactForm = () => {
           onChange={onChange}
         />
       </Label>
-      <button type="submit">Add contact</button>
+      <Button type="submit">Add contact</Button>
     </Form>
   );
 };

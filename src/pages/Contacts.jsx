@@ -1,4 +1,5 @@
 import { ContactForm } from 'components/ContactForm/ContactForm';
+import { Title } from './Pages.styled';
 
 const { ContactList } = require('components/ContactList/ContatcList');
 const { useEffect } = require('react');
@@ -18,7 +19,7 @@ const ContactsPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contacts</title>
+        <Title>Contacts</Title>
       </Helmet>
       <ContactForm />
       <div>{isLoading && 'Request in progress...'}</div>

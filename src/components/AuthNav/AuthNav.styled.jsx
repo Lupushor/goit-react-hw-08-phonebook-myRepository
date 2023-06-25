@@ -1,19 +1,12 @@
 import styled from 'styled-components';
+import { NavLink as NavLinkComponent } from 'react-router-dom';
 
-export const Form = styled.form`
+export const AuthNavStyled = styled.div`
   display: flex;
-  gap: 10px;
-  margin-top: 20px;
-  justify-content: center;
-`;
-
-export const Label = styled.label`
-  display: flex;
-  font-weight: 700;
   align-items: center;
 `;
 
-export const Button = styled.button`
+export const NavLink = styled(NavLinkComponent)`
   @media screen and (min-width: 320px) {
     padding: 5px;
 
@@ -32,7 +25,7 @@ export const Button = styled.button`
 
   text-decoration: none;
 
-  background-color: #157c11;
+  background-color: #2196f3;
   color: #ffffff;
 
   border-radius: 4px;
@@ -51,12 +44,4 @@ export const Button = styled.button`
   &:first-child {
     margin-left: 0;
   }
-`;
-
-export const Input = styled.input`
-  margin-left: 10px;
-  padding: 5px 10px;
-  border-radius: 5px;
-  border: 1px solid #000;
-  transition: all 250ms ease-in-out;
 `;
